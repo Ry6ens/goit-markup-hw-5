@@ -18,9 +18,15 @@
                 <a href="./index.html" class="nav-logo"><span class="logo1">Web</span><span class="logo2">Studio</span></a>
                 <!-- Навигация на другие страницы -->
                 <ul class="site-nav">
-                    <li class="nav-list"><a class="nav-link" href="/index.html">Студия</a></li>
-                    <li class="nav-list"><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
-                    <li class="nav-list"><a class="nav-link" href="">Контакты</a></li>
+                    <li class="nav-list">
+                        <a class="nav-link  currentpage" href="/index.html">Студия</a>
+                    </li>
+                    <li class="nav-list">
+                        <a class="nav-link" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="nav-list">
+                        <a class="nav-link" href="">Контакты</a>
+                    </li>
                 </ul>
                 <ul class="site-info">
                     <li class="nav-info">
@@ -38,13 +44,23 @@
             </nav>
         </div>
     </header> 
-    
+ 
     <main>
         <!-- Hero section -->
         <section class="hero-section">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="hero-button">Заказать услугу</button>
+                <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
+            </div>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="icon-modal" data-modal-close aria-label="закрыть">
+                    <svg width="18px" height="18px">
+                        <use href="./images/close-modal.svg#icon-close"></use>
+                    </svg>
+                    </button>
+                </div>
+
             </div>
         </section>
 
@@ -79,9 +95,24 @@
             <div class="container">
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="site-list img">
-                    <li class="img"><img width="370" src="./images/img1.jpg" alt="Кодировка"></li>
-                    <li class="img"><img width="370" src="./images/img2.jpg" alt="Телефон"></li>
-                    <li class="img"><img width="370" src="./images/img3.jpg" alt="Планшет"></li>
+                    <li class="img">
+                        <img width="370" src="./images/img1.jpg" alt="Кодировка">
+                        <div class="img-block">
+                            <p class="img-label">Десктопные приложения</p>
+                        </div>
+                    </li>
+                    <li class="img">
+                        <img width="370" src="./images/img2.jpg" alt="Телефон">
+                        <div class="img-block">
+                            <p class="img-label">Мобильные приложения</p>
+                        </div>
+                    </li>
+                    <li class="img">
+                        <img width="370" src="./images/img3.jpg" alt="Планшет">
+                        <div class="img-block">
+                            <p class="img-label">Дизайнерские решения</p>
+                        </div>
+                    </li>
                 </ul>  
             </div> 
         </section>
@@ -335,6 +366,6 @@
             </div>
         </div>
     </footer>
-
+    <script src="./js/modal.js"></script>
 </body>
 </html>
